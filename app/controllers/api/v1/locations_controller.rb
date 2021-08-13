@@ -11,7 +11,6 @@ class Api::V1::LocationsController < ApplicationController
   end
 
   def show
-    location = Location.find(params["id"])
-    render json: location, status: 200
+    render json: Location.find(params["id"]), status: 200
   end
 end
